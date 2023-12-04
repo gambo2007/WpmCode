@@ -35,7 +35,7 @@ cc.Class({
 
     },
     startGame() {
-        this.startTimer(); // Start the timer when the game begins
+        this.startTimer();
         cc.log('start')
     },
 
@@ -87,11 +87,11 @@ cc.Class({
 
     calculateWPM() {
         this.endTime = new Date().getTime();
-        const elapsedSeconds = (this.endTime - this.startTime) / 1000; // Convert milliseconds to seconds
+        const elapsedSeconds = (this.endTime - this.startTime) / 1000;
         const wordsTyped = this.inputArray.length;
 
         if (elapsedSeconds > 0) {
-            this.wordsPerMinute = Math.round((wordsTyped / elapsedSeconds) * 60); // WPM formula
+            this.wordsPerMinute = Math.round((wordsTyped / elapsedSeconds) * 60);
             cc.log('Words Per Minute:', this.wordsPerMinute);
         }
     },
